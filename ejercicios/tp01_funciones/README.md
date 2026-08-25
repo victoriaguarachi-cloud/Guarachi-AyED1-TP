@@ -7,24 +7,21 @@ Este directorio contiene los ejercicios correspondientes a este trabajo práctic
 
 ## Archivos incluidos
 
-| Nº | Archivo | Ejecución |
-|---:|---|---|
-| 1 | `tp01_ej01_mayor_unico.py` | `python tp01_ej01_mayor_unico.py` |
-| 2 | `tp01_ej02_fecha_valida.py` | `python tp01_ej02_fecha_valida.py` |
-| 3 | `tp01_ej03_gasto_subte.py` | `python tp01_ej03_gasto_subte.py` |
-| 4 | `tp01_ej04_vuelto_billetes.py` | `python tp01_ej04_vuelto_billetes.py` |
-| 5 | `tp01_ej05_oblongo_triangular.py` | `python tp01_ej05_oblongo_triangular.py` |
-| 6 | `tp01_ej06_concatenar_enteros.py` | `python tp01_ej06_concatenar_enteros.py` |
-| 7 | `tp01_ej07_dia_siguiente.py` | `python tp01_ej07_dia_siguiente.py` |
-| 8 | `tp01_ej08_calendario_mes.py` | `python tp01_ej08_calendario_mes.py` |
-| 9 | `tp01_ej09_cajones_naranjas.py` | `python tp01_ej09_cajones_naranjas.py` |
+No se encontraron archivos de ejercicios.
+
+Los archivos deben nombrarse con el formato:
+
+```text
+tp01_ej01_descripcion.py
+tp01_ej02_descripcion.py
+```
 
 ## Ejecutar un ejercicio
 
 Desde este directorio:
 
 ```bash
-python tp01_ej01_mayor_unico.py
+python tp01_ej01_nombre_del_ejercicio.py
 ```
 
 ## Ejecutar el menú
