@@ -13,26 +13,14 @@ def fecha_valida(dia,mes,anio):
             dias_del_mes=28
     else:
         dias_del_mes=0
-        print("Ingrese una fecha valida.")
 
 
     return dia >= 1 and dia <= dias_del_mes and dias_del_mes != 0
 
-def main():
-    dia=int(input("Ingrese a un dia: "))
-    mes=int(input("Ingrese a un mes: "))
-    anio=int(input("Ingrese a un anio: "))
-    
-    if bisiesto(anio):
-        print(f"El año {anio} es bisiesto. ")
-    else:
-        print(f"El año {anio} no es bisiestro.")
-        
-    fecha= fecha_valida(dia,mes,anio)
-    
-    if fecha:
-        print("La fecha es valida.")
-    else:
-        print("La fecha no es valida.")
+assert fecha_valida(15, 6, 2023) == True
+assert fecha_valida(31, 4, 2023) == False
+assert fecha_valida(29, 2, 2024) == True
+assert fecha_valida(29, 2, 2023) == False
+assert fecha_valida(10, 13, 2023) == False
 
-main()
+
