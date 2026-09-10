@@ -30,3 +30,4 @@ def main() -> None:
         for i in cambio:
             print(i)
 
+main()
