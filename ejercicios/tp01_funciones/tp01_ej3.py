@@ -1,4 +1,11 @@
 def costo_viajes(viajes: int) -> float:
+    """
+    Calcula el costo total de viajes en subte/transporte aplicando la escala
+    de descuentos escalonados según la cantidad de viajes realizados en el mes.
+
+    pre: recibe la cantidad de viajes como un número entero no negativo (>= 0).
+    post: devuelve el importe total a pagar como un valor flotante.
+    """
     tarifa = 1621
 
     if viajes <= 20:
@@ -12,13 +19,18 @@ def costo_viajes(viajes: int) -> float:
 
     return total
 
-def main():
+
+def main() -> None:
+    assert costo_viajes(10) == 16210
+    assert costo_viajes(25) == 38904
+    assert costo_viajes(35) == 51061.5
+    assert costo_viajes(45) == 61598
+    print("Todas las pruebas del assert pasaron correctamente.")
+
     viajes = int(input("Ingrese la cantidad de viajes realizados: "))
     total = costo_viajes(viajes)
     print(f"El total gastado en viajes fue de: ${total}")
 
-assert costo_viajes(10) == 16210
-assert costo_viajes(25) == 38904
-assert costo_viajes(35) == 51061.5
-assert costo_viajes(45) == 61598
-main()
+
+if __name__ == "__main__":
+    main()
