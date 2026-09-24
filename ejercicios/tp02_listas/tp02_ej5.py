@@ -1,15 +1,39 @@
-def ordenada(lista:list) -> bool:
+def ordenada(lista: list) -> bool:
     """
-    Verifica si una lista esta ordenada de menor a mayor.
+    Verifica si los elementos de una lista están ordenados de forma ascendente.
 
-    Pre: recibe una lista.
-    Post: devuelve True si esta ordenada o False si no.
+    pre: recibe una lista de elementos comparables entre sí (números, cadenas, etc.).
+    post: devuelve True si la lista está ordenada ascendentemente, False en caso contrario.
     """
-    return lista == sorted(lista)
+    es_ascendente = True
+    i = 0
 
-assert ordenada([1,2,3]) == True
-assert ordenada(["b","a"]) == False
-assert ordenada([10,2,30]) == False
-assert ordenada([]) == True
+    while i < len(lista) - 1 and es_ascendente:
+        if lista[i] > lista[i + 1]:
+            es_ascendente = False
+        i += 1
 
-print("Los assert funcionaron bien.")
+    return es_ascendente
+
+
+def main() -> None:
+    assert ordenada([1, 2, 3]) == True
+    assert ordenada(['b', 'a']) == False
+    assert ordenada([1, 1, 2, 5]) == True
+    assert ordenada([10, 5, 20]) == False
+    assert ordenada([]) == True
+    assert ordenada([5]) == True
+
+    print("Todas las pruebas del assert pasaron correctamente.\n")
+
+    ejemplo_numeros = [2, 4, 8, 15, 20]
+    ejemplo_desordenado = [5, 1, 9, 3]
+    ejemplo_letras = ['a', 'b', 'c', 'd']
+
+    print(f"La lista {ejemplo_numeros} ¿está ordenada?: {ordenada(ejemplo_numeros)}")
+    print(f"La lista {ejemplo_desordenado} ¿está ordenada?: {ordenada(ejemplo_desordenado)}")
+    print(f"La lista {ejemplo_letras} ¿está ordenada?: {ordenada(ejemplo_letras)}")
+
+
+if __name__ == "__main__":
+    main()
