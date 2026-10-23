@@ -1,5 +1,5 @@
 try:
-    with open("ejercicios/tp06_archivos/personas.txt", "rt", encoding="utf-8") as datos:
+    with open("ejercicios/tp06_archivos/tp06_ej1/personas.txt", "rt", encoding="utf-8") as datos:
         for linea in datos:
             linea_limpia = linea.strip()
             if not linea_limpia or "," not in linea_limpia:
