@@ -9,13 +9,13 @@ try:
             apellido_mayus = apellido.strip().upper()
             
             if apellido_mayus.endswith("IAN"):
-                with open("ejercicios/tp06_archivos/ARMENIA.txt", "a", encoding="utf-8") as arm:
+                with open("ejercicios/tp06_archivos/tp06_ej1/ARMENIA.txt", "a", encoding="utf-8") as arm:
                     arm.write(linea_limpia + "\n")
             elif apellido_mayus.endswith("INI"):
-                with open("ejercicios/tp06_archivos/ITALIA.txt", "a", encoding="utf-8") as it:
+                with open("ejercicios/tp06_archivos/tp06_ej1/ITALIA.txt", "a", encoding="utf-8") as it:
                     it.write(linea_limpia + "\n")
             elif apellido_mayus.endswith("EZ"):
-                with open("ejercicios/tp06_archivos/ESPANIA.txt", "a", encoding="utf-8") as esp:
+                with open("ejercicios/tp06_archivos/tp06_ej1/ESPANIA.txt", "a", encoding="utf-8") as esp:
                     esp.write(linea_limpia + "\n")
 
 except FileNotFoundError:
